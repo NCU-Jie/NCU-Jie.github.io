@@ -3,8 +3,23 @@
 <head>
     <title>我的博客</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; }
-        .post { border-bottom: 1px solid #eee; padding: 20px 0; }
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .post { 
+            border-bottom: 1px solid #eee; 
+            padding: 20px 0; 
+        }
+        .post img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -19,7 +34,21 @@
     <div class="post">
         <h2>第一篇博客</h2>
         <p>2023-10-01</p>
-        <p>这是我的第一篇博客内容...</p>
+        <p>这是我的第一篇博客内容，下面是两张不同引用方式的图片：</p>
+        
+        <!-- 绝对路径示例（使用网络图片） -->
+        <h3>1. 绝对路径引用（网络图片）</h3>
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+             alt="绝对路径示例（代码图片）"
+             title="这张图片通过完整的URL引用">
+        <p>图片说明：这张图片通过完整的HTTP URL（绝对路径）引用自Unsplash图库。</p>
+        
+        <!-- 相对路径示例（本地图片） -->
+        <h3>2. 相对路径引用（本地图片）</h3>
+        <img src="image/kunkun.jpg" 
+             alt="相对路径示例（本地图片）"
+             title="这张图片通过相对路径引用">
+        <p>图片说明：这张图片通过相对路径引用，图片文件应存放在项目目录的/images文件夹中。</p>
     </div>
 
     <footer>
